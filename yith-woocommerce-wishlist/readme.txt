@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: woocommerce wishlist, yith woocommerce wishlist, yith wishlist, woocommerce add to wishlist, wishlist for woocommerce
 Requires at least: 6.4
 Tested up to: 6.6
-Stable tag: 3.38.0
+Stable tag: 4.0.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -110,12 +110,29 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 5. Share the wishlist on social channels (available also for guest users)
 6. Fully customizable appearance
 7. Responsive design
-8. Wishlist settings page (1/3)
-9. Wishlist settings page (2/3)
-10. Wishlist settings page (3/3)
-
+8. General settings
+9. Add to wishlist options
+10. Wishlist page options
+11. Customization options (1/2)
+12. Customization options (2/2)
+13. Label customization options
 
 == Changelog ==
+
+= 4.0.0 - Released on 23 October 2024 =
+
+* New: React rendering for "Add to Wishlist" elements
+* New: Customization tab in the admin plugin panel
+* New: Labels tab in the admin plugin panel
+* New: Options to customize the "Add to Wishlist" and "Added to Wishlist" icons' colors
+* New: Welcome modal for first-time plugin installers
+* New: REST API to retrieve data and interact with wishlists and their items
+* Update: YITH plugin framework
+* Update: language files
+* Tweak: Added support to display the "Add to Wishlist" button over product images in various themes
+* Tweak: Enhanced accessibility when editing wishlist names
+* Tweak: Improved the style of PHP-rendered "Add to Wishlist" elements
+* Dev: removed legacy deprecated functions and hooks
 
 = 3.38.0 - Released on 11 September 2024 =
 
