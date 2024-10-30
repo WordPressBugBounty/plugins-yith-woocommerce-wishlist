@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: YITH WooCommerce Wishlist\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/yith-woocommerce-"
 "wishlist\n"
-"POT-Creation-Date: 2024-10-23T09:50:16+00:00\n"
+"POT-Creation-Date: 2024-10-30T08:33:15+00:00\n"
 "PO-Revision-Date: 2020-10-16 14:05+0200\n"
 "Last-Translator: Nicola Mustone <mail@nicolamustone.it>\n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
@@ -253,6 +253,10 @@ msgid "The product is already in your wishlist!"
 msgstr "Il prodotto è già nella tua lista!"
 
 #: includes/class-yith-wcwl-add-to-wishlist-button.php:886
+#: includes/class-yith-wcwl-privacy.php:315
+#: includes/class-yith-wcwl-shortcode.php:262
+#: includes/class-yith-wcwl-wishlist.php:392
+#: includes/data-stores/class-yith-wcwl-wishlist-data-store.php:1079
 #: plugin-options/customization/labels-options.php:79
 #, fuzzy
 msgid "My wishlist"

@@ -19,6 +19,41 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 		use YITH_WCWL_Extensible_Singleton_Trait;
 
 		/**
+		 * Admin class
+		 *
+		 * @var YITH_WCWL_Admin
+		 */
+		protected $wcwl_admin;
+
+		/**
+		 * Frontend class
+		 *
+		 * @var YITH_WCWL_Frontend
+		 */
+		protected $wcwl_frontend;
+
+		/**
+		 * Cron class
+		 *
+		 * @var YITH_WCWL_Cron
+		 */
+		protected $wcwl_cron;
+
+		/**
+		 * Session class
+		 *
+		 * @var YITH_WCWL_Session
+		 */
+		protected $wcwl_session;
+
+		/**
+		 * Emails
+		 *
+		 * @var array
+		 */
+		public $emails = array();
+
+		/**
 		 * Last operation token
 		 *
 		 * @since 2.0.0

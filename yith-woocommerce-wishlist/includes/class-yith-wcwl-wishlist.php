@@ -389,7 +389,7 @@ if ( ! class_exists( 'YITH_WCWL_Wishlist' ) ) {
 				 *
 				 * @return string
 				 */
-				$name = apply_filters( 'yith_wcwl_default_wishlist_formatted_title', get_option( 'yith_wcwl_wishlist_title' ) );
+				$name = apply_filters( 'yith_wcwl_default_wishlist_formatted_title', get_option( 'yith_wcwl_wishlist_title', __( 'My wishlist', 'yith-woocommerce-wishlist' ) ) );
 			}
 
 			/**

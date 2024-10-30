@@ -259,7 +259,7 @@ if ( ! class_exists( 'YITH_WCWL_Shortcode' ) ) {
 			$action        = ( isset( $action_params[ 0 ] ) ) ? $action_params[ 0 ] : 'view';
 
 			// retrieve options from db.
-			$default_wishlist_title = get_option( 'yith_wcwl_wishlist_title' );
+			$default_wishlist_title = get_option( 'yith_wcwl_wishlist_title', __( 'My wishlist', 'yith-woocommerce-wishlist' ) );
 			$show_price             = 'yes' === get_option( 'yith_wcwl_price_show' );
 			$show_stock             = 'yes' === get_option( 'yith_wcwl_stock_show' );
 			$show_date_added        = 'yes' === get_option( 'yith_wcwl_show_dateadded' );
