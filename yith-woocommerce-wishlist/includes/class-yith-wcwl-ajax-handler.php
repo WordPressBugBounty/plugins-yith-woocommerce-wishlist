@@ -302,16 +302,12 @@ if ( ! class_exists( 'YITH_WCWL_Ajax_Handler' ) ) {
 				);
 			}
 
-			if ( ! empty( $fragments ) ) {
-				foreach ( $fragments as $id => $options ) {
-					if ( isset( $options['is_user_owner'] ) && ! $options['is_user_owner'] ) {
-						wp_send_json(
-							array(
-								'result' => false,
-							)
-						);
-					}
-				}
+			if ( $wishlist && ! $wishlist->is_current_user_owner() ) {
+				wp_send_json(
+					array(
+						'result' => false,
+					)
+				);
 			}
 
 			$wishlist->set_name( $wishlist_name );
