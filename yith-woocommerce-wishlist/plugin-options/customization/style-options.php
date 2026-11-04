@@ -7,7 +7,7 @@
  * @since   4.0.0
  */
 
-defined( 'YITH_WCWL' ) || exit; // Exit if accessed directly
+defined( 'YITH_WCWL' ) || exit; // Exit if accessed directly.
 
 $share_enabled = wc_string_to_bool( get_option( 'yith_wcwl_enable_share', 'yes' ) );
 
@@ -21,13 +21,13 @@ $share_on = array(
 );
 
 $add_to_wishlist = array(
-	'add_to_wishlist_start' => array(
+	'add_to_wishlist_start'                  => array(
 		'name' => __( 'Add to wishlist', 'yith-woocommerce-wishlist' ),
 		'type' => 'title',
 		'desc' => '',
 	),
 
-	'use_buttons' => array(
+	'use_buttons'                            => array(
 		'name'      => __( 'Style of "Add to wishlist"', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Choose if you want to show a textual "Add to wishlist" link or a button', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_add_to_wishlist_style',
@@ -41,7 +41,7 @@ $add_to_wishlist = array(
 		'yith-type' => 'radio',
 	),
 
-	'add_to_wishlist_colors' => array(
+	'add_to_wishlist_colors'                 => array(
 		'name'         => __( '"Add to wishlist" button style', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_add_to_wishlist',
 		'type'         => 'yith-field',
@@ -103,7 +103,7 @@ $add_to_wishlist = array(
 		),
 	),
 
-	'add_to_wishlist_icon_type' => array(
+	'add_to_wishlist_icon_type'              => array(
 		'name'      => __( '"Add to wishlist" icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Choose whether to use one of the default icons or a custom one', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_add_to_wishlist_icon_type',
@@ -116,7 +116,7 @@ $add_to_wishlist = array(
 		),
 	),
 
-	'add_to_wishlist_icon' => array(
+	'add_to_wishlist_icon'                   => array(
 		'name'      => __( '"Add to wishlist" icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Select an icon for the "Add to wishlist" button (optional)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_add_to_wishlist_icon',
@@ -140,19 +140,19 @@ $add_to_wishlist = array(
 		),
 	),
 
-	'add_to_wishlist_icon_color' => array(
+	'add_to_wishlist_icon_color'             => array(
 		'name'      => __( 'Icon color', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_add_to_wishlist_icon_color',
 		'type'      => 'yith-field',
 		'yith-type' => 'colorpicker',
-		'default'   => '#000000',
+		'default'   => '#007565',
 		'deps'      => array(
 			'id'    => 'yith_wcwl_add_to_wishlist_icon_type',
 			'value' => 'default',
 		),
 	),
 
-	'add_to_wishlist_custom_icon' => array(
+	'add_to_wishlist_custom_icon'            => array(
 		'name'      => __( '"Add to wishlist" custom icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Upload an icon you\'d like to use for "Add to wishlist" button (suggested 32px x 32px)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_add_to_wishlist_custom_icon',
@@ -165,7 +165,7 @@ $add_to_wishlist = array(
 		),
 	),
 
-	'added_to_wishlist_icon_type' => array(
+	'added_to_wishlist_icon_type'            => array(
 		'name'      => __( '"Added to wishlist" icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Select an icon for the "Added to wishlist" button (optional)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_added_to_wishlist_icon_type',
@@ -179,7 +179,7 @@ $add_to_wishlist = array(
 		),
 	),
 
-	'added_to_wishlist_icon' => array(
+	'added_to_wishlist_icon'                 => array(
 		'name'      => __( '"Added to wishlist" icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Select an icon for the "Added to wishlist" button (optional)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_added_to_wishlist_icon',
@@ -203,7 +203,7 @@ $add_to_wishlist = array(
 		),
 	),
 
-	'added_to_wishlist_custom_icon' => array(
+	'added_to_wishlist_custom_icon'          => array(
 		'name'      => __( '"Added to wishlist" custom icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Upload an icon you\'d like to use for "Add to wishlist" button (suggested 32px x 32px)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_added_to_wishlist_custom_icon',
@@ -216,15 +216,15 @@ $add_to_wishlist = array(
 		),
 	),
 
-	'added_to_wishlist_icon_color' => array(
+	'added_to_wishlist_icon_color'           => array(
 		'name'      => __( 'Icon color', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_added_to_wishlist_icon_color',
 		'type'      => 'yith-field',
 		'yith-type' => 'colorpicker',
-		'default'   => '#000000',
+		'default'   => '#007565',
 	),
 
-	'custom_css' => array(
+	'custom_css'                             => array(
 		'name'      => __( 'Custom CSS', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Enter custom CSS to be applied to Wishlist elements (optional)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_custom_css',
@@ -233,18 +233,18 @@ $add_to_wishlist = array(
 		'yith-type' => 'textarea',
 	),
 
-	'add_to_wishlist_end' => array(
+	'add_to_wishlist_end'                    => array(
 		'type' => 'sectionend',
 	),
 );
 
 $wishlist_page = array(
-	'wishlist_page_start' => array(
+	'wishlist_page_start'                  => array(
 		'title' => __( 'Wishlist page', 'yith-woocommerce-wishlist' ),
 		'type'  => 'title',
 	),
 
-	'wishlist_use_buttons' => array(
+	'wishlist_use_buttons'                 => array(
 		'name'      => __( 'Style of "Add to cart"', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Choose whether to show a textual "Add to cart" link or a button', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_add_to_cart_style',
@@ -258,7 +258,7 @@ $wishlist_page = array(
 		'yith-type' => 'radio',
 	),
 
-	'add_to_cart_colors' => array(
+	'add_to_cart_colors'                   => array(
 		'name'         => __( '"Add to cart" button style', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_add_to_cart',
 		'type'         => 'yith-field',
@@ -322,7 +322,7 @@ $wishlist_page = array(
 		),
 	),
 
-	'add_to_cart_icon' => array(
+	'add_to_cart_icon'                     => array(
 		'name'      => __( '"Add to cart" icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Select an icon for the "Add to cart" button (optional)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_add_to_cart_icon',
@@ -347,7 +347,7 @@ $wishlist_page = array(
 
 	),
 
-	'add_to_cart_custom_icon' => array(
+	'add_to_cart_custom_icon'              => array(
 		'name'      => __( '"Add to cart" custom icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Upload an icon you\'d like to use for the "Add to cart" button (suggested 32px x 32px)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_add_to_cart_custom_icon',
@@ -355,12 +355,12 @@ $wishlist_page = array(
 		'type'      => 'yith-field',
 		'yith-type' => 'media',
 		'deps'      => array(
-			'id'    => 'yith_wcwl_add_to_cart_icon', // TODO: handle the double dependency for 'yith_wcwl_add_to_cart_icon' and 'yith_wcwl_add_to_cart_style'
+			'id'    => 'yith_wcwl_add_to_cart_icon', // TODO: handle the double dependency for 'yith_wcwl_add_to_cart_icon' and 'yith_wcwl_add_to_cart_style'.
 			'value' => 'custom',
 		),
 	),
 
-	'style_1_button_colors' => array(
+	'style_1_button_colors'                => array(
 		'name'         => __( 'Primary button style', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_button_style_1',
 		'type'         => 'yith-field',
@@ -409,7 +409,7 @@ $wishlist_page = array(
 		),
 	),
 
-	'style_2_button_colors' => array(
+	'style_2_button_colors'                => array(
 		'name'         => __( 'Secondary button style', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_button_style_2',
 		'type'         => 'yith-field',
@@ -458,7 +458,7 @@ $wishlist_page = array(
 		),
 	),
 
-	'wishlist_table_style' => array(
+	'wishlist_table_style'                 => array(
 		'name'         => __( 'Wishlist table style', 'yith-woocommerce-wishlist' ),
 		'desc'         => __( 'Choose the colors for the wishlist table (when set to "Traditional" layout)', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_wishlist_table',
@@ -487,7 +487,7 @@ $wishlist_page = array(
 		),
 	),
 
-	'headings_style' => array(
+	'headings_style'                       => array(
 		'name'      => __( 'Highlight color', 'yith-woocommerce-wishlist' ),
 		'desc'      => '<br>' . __( 'Choose the color for all sections with background<br/><small>This color will be used as background for the wishlist table heading and footer (when set to "Traditional" layout), and for various form across wishlist views</small>', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_color_headers_background',
@@ -500,7 +500,7 @@ $wishlist_page = array(
 		),
 	),
 
-	'share_colors' => $share_enabled ? array(
+	'share_colors'                         => $share_enabled ? array(
 		'name'         => __( 'Share button text color', 'yith-woocommerce-wishlist' ),
 		'desc'         => __( 'Choose colors for share buttons text', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_share_button',
@@ -520,7 +520,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'fb_button_icon' => $share_on[ 'facebook' ] ? array(
+	'fb_button_icon'                       => $share_on['facebook'] ? array(
 		'name'      => __( 'Facebook share button icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Select an icon for the Facebook share button', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_fb_button_icon',
@@ -534,7 +534,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'fb_button_custom_icon' => $share_on[ 'facebook' ] ? array(
+	'fb_button_custom_icon'                => $share_on['facebook'] ? array(
 		'name'      => __( 'Facebook share button custom icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Upload an icon you\'d like to use for Facebook share button (suggested 32px x 32px)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_fb_button_custom_icon',
@@ -547,7 +547,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'fb_button_colors' => $share_on[ 'facebook' ] ? array(
+	'fb_button_colors'                     => $share_on['facebook'] ? array(
 		'name'         => __( 'Facebook share button style', 'yith-woocommerce-wishlist' ),
 		'desc'         => __( 'Choose colors for Facebook share button', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_fb_button',
@@ -567,7 +567,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'tw_button_icon' => $share_on[ 'twitter' ] ? array(
+	'tw_button_icon'                       => $share_on['twitter'] ? array(
 		'name'      => __( 'Twitter (X) share button icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Select an icon for the Twitter (X) share button', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_tw_button_icon',
@@ -581,7 +581,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'tw_button_custom_icon' => $share_on[ 'twitter' ] ? array(
+	'tw_button_custom_icon'                => $share_on['twitter'] ? array(
 		'name'      => __( 'Twitter (X) share button custom icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Upload an icon you\'d like to use for Twitter (X) share button (suggested 32px x 32px)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_tw_button_custom_icon',
@@ -594,7 +594,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'tw_button_colors' => $share_on[ 'twitter' ] ? array(
+	'tw_button_colors'                     => $share_on['twitter'] ? array(
 		'name'         => __( 'Twitter (X) share button style', 'yith-woocommerce-wishlist' ),
 		'desc'         => __( 'Choose colors for Twitter (X) share button', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_tw_button',
@@ -614,15 +614,15 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'socials_image' => array(
+	'socials_image'                        => $share_on['pinterest'] ? array(
 		'name'    => __( 'Pinterest image', 'yith-woocommerce-wishlist' ),
 		'desc'    => __( 'Set an image to share the list on Pinterest', 'yith-woocommerce-wishlist' ),
 		'id'      => 'yith_wcwl_socials_image_url',
 		'default' => '',
 		'type'    => 'text', // TODO: transform into an upload field.
-	),
+	) : false,
 
-	'pr_button_icon' => $share_on[ 'pinterest' ] ? array(
+	'pr_button_icon'                       => $share_on['pinterest'] ? array(
 		'name'      => __( 'Pinterest share button icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Select an icon for the Pinterest share button', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_pr_button_icon',
@@ -636,7 +636,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'pr_button_custom_icon' => $share_on[ 'pinterest' ] ? array(
+	'pr_button_custom_icon'                => $share_on['pinterest'] ? array(
 		'name'      => __( 'Pinterest share button custom icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Upload an icon you\'d like to use for Pinterest share button (suggested 32px x 32px)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_pr_button_custom_icon',
@@ -649,7 +649,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'pr_button_colors' => $share_on[ 'pinterest' ] ? array(
+	'pr_button_colors'                     => $share_on['pinterest'] ? array(
 		'name'         => __( 'Pinterest share button style', 'yith-woocommerce-wishlist' ),
 		'desc'         => __( 'Choose colors for Pinterest share button', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_pr_button',
@@ -669,7 +669,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'em_button_icon' => $share_on[ 'email' ] ? array(
+	'em_button_icon'                       => $share_on['email'] ? array(
 		'name'      => __( 'Email share button icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Select an icon for the Email share button', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_em_button_icon',
@@ -683,7 +683,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'em_button_custom_icon' => $share_on[ 'email' ] ? array(
+	'em_button_custom_icon'                => $share_on['email'] ? array(
 		'name'      => __( 'Email share button custom icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Upload an icon you\'d like to use for the Email share button (suggested 32px x 32px)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_em_button_custom_icon',
@@ -696,7 +696,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'em_button_colors' => $share_on[ 'email' ] ? array(
+	'em_button_colors'                     => $share_on['email'] ? array(
 		'name'         => __( 'Email share button style', 'yith-woocommerce-wishlist' ),
 		'desc'         => __( 'Choose colors for the Email share button', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_em_button',
@@ -716,7 +716,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'wa_button_icon' => $share_on[ 'whatsapp' ] ? array(
+	'wa_button_icon'                       => $share_on['whatsapp'] ? array(
 		'name'      => __( 'WhatsApp share button icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Select an icon for the WhatsApp share button', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_wa_button_icon',
@@ -730,7 +730,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'wa_button_custom_icon' => $share_on[ 'whatsapp' ] ? array(
+	'wa_button_custom_icon'                => $share_on['whatsapp'] ? array(
 		'name'      => __( 'WhatsApp share button custom icon', 'yith-woocommerce-wishlist' ),
 		'desc'      => __( 'Upload an icon you\'d like to use for WhatsApp share button (suggested 32px x 32px)', 'yith-woocommerce-wishlist' ),
 		'id'        => 'yith_wcwl_wa_button_custom_icon',
@@ -743,7 +743,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'wa_button_colors' => $share_on[ 'whatsapp' ] ? array(
+	'wa_button_colors'                     => $share_on['whatsapp'] ? array(
 		'name'         => __( 'WhatsApp share button style', 'yith-woocommerce-wishlist' ),
 		'desc'         => __( 'Choose colors for WhatsApp share button', 'yith-woocommerce-wishlist' ),
 		'id'           => 'yith_wcwl_color_wa_button',
@@ -763,7 +763,7 @@ $wishlist_page = array(
 		),
 	) : false,
 
-	'wishlist_page_end' => array(
+	'wishlist_page_end'                    => array(
 		'type' => 'sectionend',
 	),
 );
