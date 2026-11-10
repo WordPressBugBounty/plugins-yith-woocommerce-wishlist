@@ -151,10 +151,9 @@ Yes, of course you can. To avoid Wishlist page to show product prices, you can h
 
 ## Changelog
 
-### 4.20.0 - Released on 4 November 2026 =
+### 4.21.0 - Released on 10 November 2026 =
 
-* New: support for WooCommerce 11.3
-* Update: YITH plugin framework
+* New: compatibility with WPML Multilingual & Multicurrency for WooCommerce, to convert the price correctly on the wishlist page
 
 ## Support
 

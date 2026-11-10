@@ -7,7 +7,7 @@
  * @version 3.0.0
  */
 
-defined( 'YITH_WCWL' ) || exit; // Exit if accessed directly
+defined( 'YITH_WCWL' ) || exit; // Exit if accessed directly.
 
 if ( ! class_exists( 'YITH_WCWL' ) ) {
 	/**
@@ -96,6 +96,7 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 
 			YITH_WCWL_Install::get_instance();
 			YITH_WCWL_Rest_Server::get_instance();
+			YITH_WCWL_Compatibility::get_instance();
 
 			// load plugin-fw.
 			add_action( 'plugins_loaded', array( $this, 'privacy_loader' ), 20 );
@@ -165,8 +166,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 		 * @return array Array of filtered data store
 		 */
 		public function register_data_stores( $data_stores ) {
-			$data_stores[ 'wishlist' ]      = 'YITH_WCWL_Wishlist_Data_Store';
-			$data_stores[ 'wishlist-item' ] = 'YITH_WCWL_Wishlist_Item_Data_Store';
+			$data_stores['wishlist']      = 'YITH_WCWL_Wishlist_Data_Store';
+			$data_stores['wishlist-item'] = 'YITH_WCWL_Wishlist_Item_Data_Store';
 
 			return $data_stores;
 		}
@@ -272,8 +273,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 			$wishlist_permalink = get_the_permalink( $wishlist_page_id );
 
 			$action_params = explode( '/', $action );
-			$view          = $action_params[ 0 ];
-			$data          = isset( $action_params[ 1 ] ) ? $action_params[ 1 ] : '';
+			$view          = $action_params[0];
+			$data          = isset( $action_params[1] ) ? $action_params[1] : '';
 
 			if ( 'view' === $action && empty( $data ) ) {
 				return $wishlist_permalink;
@@ -290,9 +291,9 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 					$params[ $this->wishlist_param ] = $view;
 
 					if ( 'view' === $view ) {
-						$params[ 'wishlist_id' ] = $data;
+						$params['wishlist_id'] = $data;
 					} elseif ( 'user' === $view ) {
-						$params[ 'user_id' ] = $data;
+						$params['user_id'] = $data;
 					}
 				} else {
 					$params[ $this->wishlist_param ] = $view;
@@ -357,9 +358,9 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 				$args
 			);
 
-			if ( isset( $args[ 'base_url' ] ) ) {
-				$base_url = $args[ 'base_url' ];
-				unset( $args[ 'base_url' ] );
+			if ( isset( $args['base_url'] ) ) {
+				$base_url = $args['base_url'];
+				unset( $args['base_url'] );
 
 				$url = add_query_arg( $args, $base_url );
 			} else {
@@ -423,8 +424,8 @@ if ( ! class_exists( 'YITH_WCWL' ) ) {
 			// phpcs:disable WordPress.Security.NonceVerification.Recommended
 			if ( yith_wcwl_is_wishlist_page() && isset( $_GET[ $this->wishlist_param ] ) ) {
 				$wishlist_action = sanitize_text_field( wp_unslash( $_GET[ $this->wishlist_param ] ) );
-				$user_id         = isset( $_GET[ 'user_id' ] ) ? sanitize_text_field( wp_unslash( $_GET[ 'user_id' ] ) ) : '';
-				$wishlist_id     = isset( $_GET[ 'wishlist_id' ] ) ? sanitize_text_field( wp_unslash( $_GET[ 'wishlist_id' ] ) ) : '';
+				$user_id         = isset( $_GET['user_id'] ) ? sanitize_text_field( wp_unslash( $_GET['user_id'] ) ) : '';
+				$wishlist_id     = isset( $_GET['wishlist_id'] ) ? sanitize_text_field( wp_unslash( $_GET['wishlist_id'] ) ) : '';
 
 				$params = array_filter(
 					array(

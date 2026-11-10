@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: YITH WooCommerce Wishlist\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/yith-woocommerce-"
 "wishlist\n"
-"POT-Creation-Date: 2026-09-07T12:45:38+00:00\n"
+"POT-Creation-Date: 2026-11-10T12:24:06+00:00\n"
 "PO-Revision-Date: 2020-10-16 14:07+0200\n"
 "Last-Translator: Valentyn Zubenko <valentyn.zubenko@gmail.com>\n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
@@ -861,13 +861,13 @@ msgctxt "Elementor control label"
 msgid "Paginate items"
 msgstr ""
 
-#: init.php:142
+#: init.php:145
 msgid ""
 "YITH WooCommerce Wishlist was deactivated as you're running an higher tier "
 "version of the same plugin."
 msgstr ""
 
-#: init.php:158
+#: init.php:161
 msgid "is enabled but not effective. It requires WooCommerce to work."
 msgstr ""
 
